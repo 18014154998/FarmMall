@@ -1,11 +1,8 @@
 package lpy.farmmall.user.Service.Impl;
 
-import lpy.farmmall.user.Bean.UmsMember;
-import lpy.farmmall.user.Bean.UmsMemberReceiveAddress;
-import lpy.farmmall.user.Bean.UmsMemberReceiveAddressExample;
-import lpy.farmmall.user.Mapper.UmsMemberReceiveAddressMapper;
+import lpy.farmmall.bean.UmsMember;
 import lpy.farmmall.user.Mapper.UserMapper;
-import lpy.farmmall.user.Service.UserService;
+import lpy.farmmall.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,24 +15,17 @@ import java.util.List;
  **/
 @Service
 public class UserServiceImpl implements UserService {
+
     @Autowired
     UserMapper userMapper;
-    @Autowired
-    UmsMemberReceiveAddressMapper umsMemberReceiveAddressMapper;
 
     //获取所以顾客信息
     @Override
     public List<UmsMember> getAllUser() {
-        List<UmsMember> umsMembers=userMapper.selectAllUser();
+        /*List<UmsMember> umsMembers=userMapper.selectAllUser();*/
+        List<UmsMember> umsMembers=userMapper.selectAll();
         return umsMembers;
     }
-    //根据会员号码，获取收货地址
-    @Override
-    public List<UmsMemberReceiveAddress> getReciveredAddressByMenberId(Long memberId) {
-        UmsMemberReceiveAddressExample umsAddressExample = new UmsMemberReceiveAddressExample();
-        UmsMemberReceiveAddressExample.Criteria criteria = umsAddressExample.createCriteria();
-        criteria.andMemberIdEqualTo(memberId);
-        List<UmsMemberReceiveAddress> addressList=umsMemberReceiveAddressMapper.selectByExample(umsAddressExample);
-        return addressList;
-    }
+
+
 }

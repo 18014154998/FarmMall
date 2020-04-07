@@ -1,10 +1,12 @@
-package lpy.farmmall.user.Bean;
+package lpy.farmmall.bean;
 
-import lombok.Data;
 
-@Data
+
+import javax.persistence.Id;
+
 public class UmsMemberReceiveAddress {
 
+    @Id
     private Long id;
 
     private Long memberId;
