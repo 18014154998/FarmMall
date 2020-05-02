@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lpy.farmmall.mapper.UmsMemberReceiveAddressMapper">
+
+
+    <insert id="insertBymemberId" parameterType="lpy.farmmall.bean.UmsMemberReceiveAddress" >
+        insert  into ums_member_receive_address
+        (member_id, name, phone_number, province, city, region, detail_address)
+        values
+        (#{memberId}, #{name}, #{phoneNumber}, #{province}, #{city}, #{region}, #{detailAddress} )
+    </insert>
+</mapper>

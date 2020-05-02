@@ -1,4 +1,4 @@
-package lpy.farmmall.user.Mapper;
+package lpy.farmmall.mapper;
 
 import lpy.farmmall.bean.UmsMember;
 import org.springframework.stereotype.Repository;

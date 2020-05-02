@@ -1,7 +1,7 @@
 package lpy.farmmall.user.Service.Impl;
 
 import lpy.farmmall.bean.UmsMember;
-import lpy.farmmall.user.Mapper.UserMapper;
+import lpy.farmmall.mapper.UserMapper;
 import lpy.farmmall.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

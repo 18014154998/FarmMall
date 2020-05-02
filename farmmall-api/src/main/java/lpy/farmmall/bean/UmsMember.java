@@ -5,6 +5,7 @@ package lpy.farmmall.bean;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -13,7 +14,7 @@ import java.util.Date;
  * @verson 1.0
  **/
 
-public class UmsMember {
+public class UmsMember implements Serializable {
     //主键
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
